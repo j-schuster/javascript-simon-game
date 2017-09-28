@@ -1,0 +1,310 @@
+/* ================================
+========== colors =================
+================================== */
+
+/*
+green - #00ed00
+red - #ffc9c9
+blue - #6d6dff
+yellow - #ffffe7
+*/
+
+* {
+    margin:0;
+    padding: 0;
+    color: white;
+}
+
+.simon-game {
+    position: relative
+}
+
+body {
+  
+background: #457fca;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "lato";
+  font-weight: 100;    
+    
+}
+
+.controls-circle {
+    
+    position:absolute;
+	width: 220px;
+	height: 220px;
+	margin-top: 100px;
+    margin-left: 110px;
+    border: solid 1px #ffffff;
+    border-radius: 50%;
+    background-color: 3a3c3a;
+    
+}
+
+.logo {
+    text-decoration-color: white;
+    text-align: center;
+    margin-top: 40px;
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+    
+}
+
+.controls {
+     position: relative;
+     display: inline-block;
+     margin-left: 15px;
+     margin-top: 15px;
+    
+}
+
+.counter {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    height: 30px;
+    width: 45px; 
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    color: #790e0c;
+    background-color: #696969;
+    border-radius: 3px;
+}
+
+.start-btn {
+    position: absolute;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #a00707;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    margin-left: 85px;
+    line-height: 20px;
+    margin-top: 15px;
+    background-color: #e74c3c;
+  
+}
+.strict-btn {
+    position: absolute;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #c6c623;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    margin-left: 145px;
+    margin-top: 15px;
+    background-color: #f7cd28;
+    
+}
+
+
+.power {
+    position: absolute;
+    border: 1px solid red;
+    height: 20px;
+    width: 40px;
+    margin: auto;
+    margin-top: 5px;
+    margin-left: 90px;
+    margin-top: 10px;
+}
+
+
+.strict-light {
+    position: absolute;
+    background-color: 3a3c3a;
+    height: 5px;
+    width: 5px;
+    border: 1px solid 3a3c3a;
+    margin-left: 155px;
+    margin-top: 5px;
+    border-radius: 100%;
+}
+
+p {
+    display: inline-block;
+    margin-top: 50px;
+       
+}
+
+#count {
+    margin-left: 10px;
+}
+
+#start {
+    margin-left: 25px;
+    
+}
+
+#strict {
+    margin-left: 20px;
+}
+
+.on {
+       position: absolute;
+    display: inline-block;
+    margin-left: 145px;
+    margin-top: -22px;
+     
+}
+
+.power-buttons {
+    position: absolute;
+    
+}
+
+.off {
+    
+      
+    position: absolute;
+    margin-top:-22px;
+    display: inline-block;
+    margin-left: 55px
+    
+ 
+}
+
+
+
+/* ====================================
+=========== Switch ====================
+===================================== */
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-left: 85px;
+  margin-top: 10px;      
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3498db;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 5%;    
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 5%;
+}
+
+input:checked + .slider {
+  background-color: #ff4f4f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/* ====================================
+=========== outside ====================
+===================================== */
+
+
+.game-container {
+    
+    position: relative;
+    height: 440px;
+    width: 440px;
+    margin: auto;
+    border: 1px solid #ffffff;
+    border-radius: 110%;
+    margin-top: 150px;
+    background-color: 3a3c3a;
+    box-shadow: 0px 0px 30px #414141;
+}
+
+.game-button {
+    margin:10px;
+}
+
+
+
+#button-0 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ffffff;
+    border-top-left-radius: 100%;
+    background-color: #27ae60;
+
+}
+
+#button-1 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ffffff;
+    border-top-right-radius: 100%;
+    background-color: #e74c3c;
+    right:0;
+}
+
+#button-2 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ffffff;
+    border-bottom-right-radius: 100%;
+    bottom: 0;
+    right: 0;
+    background-color: #2980b9;
+
+}
+
+
+
+#button-3 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ffffff;
+    border-bottom-left-radius: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd52f;
+}
+
+
+
+
