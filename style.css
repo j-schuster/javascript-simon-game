@@ -25,7 +25,7 @@ background: #457fca;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  font-family: "lato";
+  
   font-weight: 100;    
     
 }
@@ -37,7 +37,7 @@ background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, F
 	height: 220px;
 	margin-top: 100px;
     margin-left: 110px;
-    border: solid 1px #ffffff;
+    border: solid 3px black;
     border-radius: 50%;
     background-color: 3a3c3a;
     
@@ -247,7 +247,7 @@ input:checked + .slider:before {
     height: 440px;
     width: 440px;
     margin: auto;
-    border: 1px solid #ffffff;
+    border: 3px solid black;
     border-radius: 110%;
     margin-top: 150px;
     background-color: 3a3c3a;
@@ -264,8 +264,10 @@ input:checked + .slider:before {
     position: absolute;
     height: 200px;
     width: 200px;
-    border: 1px solid #ffffff;
-    border-top-left-radius: 100%;
+    border: 3px solid black;
+    border-top-left-radius:140%;
+    border-bottom-left-radius: 15px; 
+    border-top-right-radius: 15px;
     background-color: #27ae60;
 
 }
@@ -274,8 +276,10 @@ input:checked + .slider:before {
     position: absolute;
     height: 200px;
     width: 200px;
-    border: 1px solid #ffffff;
-    border-top-right-radius: 100%;
+    border: 3px solid black;
+    border-top-right-radius: 140%;
+    border-top-left-radius: 15px; 
+    border-bottom-right-radius: 15px;
     background-color: #e74c3c;
     right:0;
 }
@@ -284,8 +288,10 @@ input:checked + .slider:before {
     position: absolute;
     height: 200px;
     width: 200px;
-    border: 1px solid #ffffff;
-    border-bottom-right-radius: 100%;
+    border: 3px solid black;
+    border-bottom-right-radius: 140%;
+    border-top-right-radius: 15px; 
+    border-bottom-left-radius: 15px;
     bottom: 0;
     right: 0;
     background-color: #2980b9;
@@ -298,13 +304,43 @@ input:checked + .slider:before {
     position: absolute;
     height: 200px;
     width: 200px;
-    border: 1px solid #ffffff;
-    border-bottom-left-radius: 100%;
+    border: 3px solid black;
+    border-bottom-left-radius: 140%;
+    border-top-left-radius: 15px; 
+    border-bottom-right-radius: 15px;
     bottom: 0;
     left: 0;
     background-color: #ffd52f;
 }
 
+.instructions:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
 
+.instructions {
+  height: 30px;
+  width: 100px;
+  background-color: pink;
+  margin: 20px;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.directions {
+  visibility: hidden;
+  margin: 0 auto;
+  height: 100px;
+  width: 400px;
+  background-color: grey;
+  border: 3px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
 
 

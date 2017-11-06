@@ -89,19 +89,28 @@ var Game = (function() {
 };
   
     function displaySequence(index){
-       
-       if(index === undefined || index === -1){
+      
+      if(index === undefined || index === -1){
            return;
        }
-   
-         getId('button-' + index).style.opacity = .3;
-         getId('button-' + index).style.boxShadow = "4px 5px 5px #5d5d5d";
-         board.sounds[index].play();
+          
+         setTimeout(() => {
+            getId('button-' + index).style.opacity = .3;
+            getId('button-' + index).style.boxShadow = "4px 5px 5px #5d5d5d";
+            board.sounds[index].play();
+            
+        }, 10);
         
-         setInterval(() => {
-            getId('button-' + index).style.opacity = 1;
-            getId('button-' + index).style.boxShadow = 'none';
-        }, 600);
+        setTimeout(() => {
+         getId('button-' + index).style.opacity = 1;
+         getId('button-' + index).style.boxShadow = 'none';
+    }, 200);
+    
+        
+       
+        
+         
+        
         
     };
     
@@ -126,7 +135,7 @@ var Game = (function() {
                     
                         gameState.counter++;
                         disableButtons();
-				        generateNumber();
+				                generateNumber();
                         gameState.player.length = 0;
                         playSequence();
                    
@@ -145,7 +154,7 @@ var Game = (function() {
     
         function winner() {
       
-          // play a victorius sound
+          // TODO: play a victorius sound
             
           // show icon 
            getId('counter').classList.add('ion-android-happy');
@@ -160,7 +169,7 @@ var Game = (function() {
     
         function loser() {
       
-          // play a sad sound
+          // TODO: play a sad sound
             
           // show icon
            getId('counter').classList.add('ion-android-sad');
@@ -180,13 +189,12 @@ var Game = (function() {
            setInterval(() => {
                getId('counter').classList.remove('ion-refresh');
                getId('counter').innerHTML = gameState.counter; 
-           }, 500);    
+           }, 200);    
                
            disableButtons();
        };
         
-          function getId(ID) {
-              
+          function getId(ID) {            
                 return document.getElementById(ID);
        }; 
     
@@ -290,7 +298,8 @@ const removeBtn = game.getDisableBtn();
 const resetBoard = game.getReset();    
  
         
-    var initializeBoard = function() {   
+    var initializeBoard = function() {  
+
         
         if(!gameState.power) {
             
@@ -304,7 +313,6 @@ const resetBoard = game.getReset();
          
        
       }else{
-          
         // set counter to 0
         gameState.counter = undefined;
         // set power to true
@@ -357,7 +365,11 @@ const resetBoard = game.getReset();
         }
    };  
         
-  
+    document.querySelector('.instructions').addEventListener('click', function(){ 
+      let dir = document.querySelector('.directions');
+      dir.style.visibility === 'hidden' ? dir.style.visibility = 'visible' : dir.style.visibility = 'hidden';
+      dir.innerText = 'Hello and welcome! To turn on and play Simon, simply click on the on/ off toggle switch, hit start and turn your thinking cap on! If you feel daring, you can turn on strict mode, if you fail, you will lose the round, otherwise you will continuosly play until you are defeated, or of course you win! Good luck! Hit the instructions button to remove the directions.';
+     })
     document.querySelector(board.controls.powerButton).addEventListener('click', initializeBoard);
     document.querySelector(board.controls.startButton).addEventListener('click', startGame);
     document.getElementById(board.controls.strictButton).addEventListener('click', strictToggle);
