@@ -364,12 +364,12 @@ const resetBoard = game.getReset();
             
         }
    };  
-        
+    /*    
     document.querySelector('.instructions').addEventListener('click', function(){ 
       let dir = document.querySelector('.directions');
       dir.style.visibility === 'hidden' ? dir.style.visibility = 'visible' : dir.style.visibility = 'hidden';
       dir.innerText = 'Hello and welcome! To turn on and play Simon, simply click on the on/ off toggle switch, hit start and turn your thinking cap on! If you feel daring, you can turn on strict mode, if you fail, you will lose the round, otherwise you will continuosly play until you are defeated, or of course you win! Good luck! Hit the instructions button to remove the directions.';
-     })
+     })*/
     document.querySelector(board.controls.powerButton).addEventListener('click', initializeBoard);
     document.querySelector(board.controls.startButton).addEventListener('click', startGame);
     document.getElementById(board.controls.strictButton).addEventListener('click', strictToggle);
